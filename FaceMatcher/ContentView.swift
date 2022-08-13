@@ -12,37 +12,43 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
+        sortDescriptors: [NSSortDescriptor(keyPath: \SavedGame.timestamp, ascending: true)],
         animation: .default)
-    private var items: FetchedResults<Item>
+    private var items: FetchedResults<SavedGame>
+    
+    @State private var showingNameSheet: Bool = false
+    @State private var newName: String = ""
 
     var body: some View {
         NavigationView {
             List {
                 ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
-                    }
+                    NavigationLink (destination: SaveView(savedGame: item),  label: {
+                        Text(item.name!)
+                    })
                 }
                 .onDelete(perform: deleteItems)
             }
             .toolbar {
                 ToolbarItem {
-                    Button(action: addItem) {
+                    Button(action: {
+                        showingNameSheet.toggle()
+                    }, label: {
                         Label("Add Item", systemImage: "plus")
+                    }).sheet(isPresented: $showingNameSheet, onDismiss: addItem) {
+                        TextField("Save Name", text: $newName)
                     }
                 }
             }
-            Text("Select an item")
+            Text("Select a save")
         }
     }
 
     private func addItem() {
         withAnimation {
-            let newItem = Item(context: viewContext)
+            let newItem = SavedGame(context: viewContext)
             newItem.timestamp = Date()
+            newItem.name = newName
 
             do {
                 try viewContext.save()

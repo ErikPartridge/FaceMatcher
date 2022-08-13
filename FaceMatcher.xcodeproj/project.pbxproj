@@ -16,6 +16,10 @@
 		0380338528A6A0F4006A9C4F /* FaceMatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0380338428A6A0F4006A9C4F /* FaceMatcherTests.swift */; };
 		0380338F28A6A0F4006A9C4F /* FaceMatcherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0380338E28A6A0F4006A9C4F /* FaceMatcherUITests.swift */; };
 		0380339128A6A0F4006A9C4F /* FaceMatcherUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0380339028A6A0F4006A9C4F /* FaceMatcherUITestsLaunchTests.swift */; };
+		0380339E28A6A1BE006A9C4F /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0380339D28A6A1BE006A9C4F /* Configuration.swift */; };
+		038033A228A6A7DE006A9C4F /* SaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038033A128A6A7DE006A9C4F /* SaveView.swift */; };
+		038033A728A7C240006A9C4F /* PlayerRecord+Ethnicity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038033A628A7C240006A9C4F /* PlayerRecord+Ethnicity.swift */; };
+		038033A928A7C279006A9C4F /* ImageFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038033A828A7C279006A9C4F /* ImageFileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		0380338A28A6A0F4006A9C4F /* FaceMatcherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceMatcherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0380338E28A6A0F4006A9C4F /* FaceMatcherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceMatcherUITests.swift; sourceTree = "<group>"; };
 		0380339028A6A0F4006A9C4F /* FaceMatcherUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceMatcherUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0380339D28A6A1BE006A9C4F /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		038033A128A6A7DE006A9C4F /* SaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveView.swift; sourceTree = "<group>"; };
+		038033A628A7C240006A9C4F /* PlayerRecord+Ethnicity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayerRecord+Ethnicity.swift"; sourceTree = "<group>"; };
+		038033A828A7C279006A9C4F /* ImageFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +107,17 @@
 		0380336C28A6A0F3006A9C4F /* FaceMatcher */ = {
 			isa = PBXGroup;
 			children = (
-				0380336D28A6A0F3006A9C4F /* FaceMatcherApp.swift */,
-				0380336F28A6A0F3006A9C4F /* ContentView.swift */,
 				0380337128A6A0F4006A9C4F /* Assets.xcassets */,
-				0380337628A6A0F4006A9C4F /* Persistence.swift */,
+				0380339D28A6A1BE006A9C4F /* Configuration.swift */,
+				0380336F28A6A0F3006A9C4F /* ContentView.swift */,
 				0380337B28A6A0F4006A9C4F /* FaceMatcher.entitlements */,
 				0380337828A6A0F4006A9C4F /* FaceMatcher.xcdatamodeld */,
+				0380336D28A6A0F3006A9C4F /* FaceMatcherApp.swift */,
+				038033A828A7C279006A9C4F /* ImageFileManager.swift */,
+				0380337628A6A0F4006A9C4F /* Persistence.swift */,
+				038033A628A7C240006A9C4F /* PlayerRecord+Ethnicity.swift */,
 				0380337328A6A0F4006A9C4F /* Preview Content */,
+				038033A128A6A7DE006A9C4F /* SaveView.swift */,
 			);
 			path = FaceMatcher;
 			sourceTree = "<group>";
@@ -151,6 +163,8 @@
 			dependencies = (
 			);
 			name = FaceMatcher;
+			packageProductDependencies = (
+			);
 			productName = FaceMatcher;
 			productReference = 0380336A28A6A0F3006A9C4F /* FaceMatcher.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +237,8 @@
 				Base,
 			);
 			mainGroup = 0380336128A6A0F3006A9C4F;
+			packageReferences = (
+			);
 			productRefGroup = 0380336B28A6A0F3006A9C4F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -266,9 +282,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0380337728A6A0F4006A9C4F /* Persistence.swift in Sources */,
+				0380339E28A6A1BE006A9C4F /* Configuration.swift in Sources */,
 				0380337028A6A0F3006A9C4F /* ContentView.swift in Sources */,
+				038033A228A6A7DE006A9C4F /* SaveView.swift in Sources */,
 				0380336E28A6A0F3006A9C4F /* FaceMatcherApp.swift in Sources */,
 				0380337A28A6A0F4006A9C4F /* FaceMatcher.xcdatamodeld in Sources */,
+				038033A928A7C279006A9C4F /* ImageFileManager.swift in Sources */,
+				038033A728A7C240006A9C4F /* PlayerRecord+Ethnicity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,13 +448,16 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FaceMatcher/Preview Content\"";
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				GCC_UNROLL_LOOPS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LLVM_LTO = YES_THIN;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.erikpartridge.FaceMatcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -453,13 +476,16 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FaceMatcher/Preview Content\"";
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				GCC_UNROLL_LOOPS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LLVM_LTO = YES_THIN;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.erikpartridge.FaceMatcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
